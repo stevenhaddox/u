@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
 gem 'sqlite3'
+gem 'high_voltage'
 
 # Bundle gems for the local environment
 group :development, :test do

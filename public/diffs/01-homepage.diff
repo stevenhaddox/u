@@ -1,0 +1,341 @@
+diff --git a/Gemfile b/Gemfile
+index a92904c..e68928a 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -3,6 +3,7 @@ source 'http://rubygems.org'
+ 
+ gem 'rails', '3.0.7'
+ gem 'sqlite3'
++gem 'high_voltage'
+ 
+ # Bundle gems for the local environment
+ group :development, :test do
+diff --git a/Gemfile.lock b/Gemfile.lock
+index 8173243..6d97af0 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -61,6 +61,7 @@ GEM
+     ffi (1.0.8)
+     gherkin (2.3.8)
+       json (>= 1.4.6)
++    high_voltage (0.9.4)
+     i18n (0.5.0)
+     json (1.5.1)
+     json_pure (1.5.1)
+@@ -127,6 +128,7 @@ DEPENDENCIES
+   cucumber-rails
+   database_cleaner
+   factory_girl_rails
++  high_voltage
+   rails (= 3.0.7)
+   rspec-rails (~> 2.4)
+   sqlite3
+diff --git a/config/routes.rb b/config/routes.rb
+index 3364adb..fc6bc5d 100644
+--- a/config/routes.rb
++++ b/config/routes.rb
+@@ -1,58 +1,5 @@
+ U::Application.routes.draw do
+-  # The priority is based upon order of creation:
+-  # first created -> highest priority.
+ 
+-  # Sample of regular route:
+-  #   match 'products/:id' => 'catalog#view'
+-  # Keep in mind you can assign values other than :controller and :action
++  root :to => 'high_voltage/pages#show', :id => 'home'
+ 
+-  # Sample of named route:
+-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+-  # This route can be invoked with purchase_url(:id => product.id)
+-
+-  # Sample resource route (maps HTTP verbs to controller actions automatically):
+-  #   resources :products
+-
+-  # Sample resource route with options:
+-  #   resources :products do
+-  #     member do
+-  #       get 'short'
+-  #       post 'toggle'
+-  #     end
+-  #
+-  #     collection do
+-  #       get 'sold'
+-  #     end
+-  #   end
+-
+-  # Sample resource route with sub-resources:
+-  #   resources :products do
+-  #     resources :comments, :sales
+-  #     resource :seller
+-  #   end
+-
+-  # Sample resource route with more complex sub-resources
+-  #   resources :products do
+-  #     resources :comments
+-  #     resources :sales do
+-  #       get 'recent', :on => :collection
+-  #     end
+-  #   end
+-
+-  # Sample resource route within a namespace:
+-  #   namespace :admin do
+-  #     # Directs /admin/products/* to Admin::ProductsController
+-  #     # (app/controllers/admin/products_controller.rb)
+-  #     resources :products
+-  #   end
+-
+-  # You can have the root of your site routed with "root"
+-  # just remember to delete public/index.html.
+-  # root :to => "welcome#index"
+-
+-  # See how all your routes lay out with "rake routes"
+-
+-  # This is a legacy wild controller route that's not recommended for RESTful applications.
+-  # Note: This route will make all actions in every controller accessible via GET requests.
+-  # match ':controller(/:action(/:id(.:format)))'
+ end
+diff --git a/public/index.html b/public/index.html
+deleted file mode 100644
+index 75d5edd..0000000
+--- a/public/index.html
++++ /dev/null
+@@ -1,239 +0,0 @@
+-<!DOCTYPE html>
+-<html>
+-  <head>
+-    <title>Ruby on Rails: Welcome aboard</title>
+-    <style type="text/css" media="screen">
+-      body {
+-        margin: 0;
+-        margin-bottom: 25px;
+-        padding: 0;
+-        background-color: #f0f0f0;
+-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+-        font-size: 13px;
+-        color: #333;
+-      }
+-
+-      h1 {
+-        font-size: 28px;
+-        color: #000;
+-      }
+-
+-      a  {color: #03c}
+-      a:hover {
+-        background-color: #03c;
+-        color: white;
+-        text-decoration: none;
+-      }
+-
+-
+-      #page {
+-        background-color: #f0f0f0;
+-        width: 750px;
+-        margin: 0;
+-        margin-left: auto;
+-        margin-right: auto;
+-      }
+-
+-      #content {
+-        float: left;
+-        background-color: white;
+-        border: 3px solid #aaa;
+-        border-top: none;
+-        padding: 25px;
+-        width: 500px;
+-      }
+-
+-      #sidebar {
+-        float: right;
+-        width: 175px;
+-      }
+-
+-      #footer {
+-        clear: both;
+-      }
+-
+-
+-      #header, #about, #getting-started {
+-        padding-left: 75px;
+-        padding-right: 30px;
+-      }
+-
+-
+-      #header {
+-        background-image: url("images/rails.png");
+-        background-repeat: no-repeat;
+-        background-position: top left;
+-        height: 64px;
+-      }
+-      #header h1, #header h2 {margin: 0}
+-      #header h2 {
+-        color: #888;
+-        font-weight: normal;
+-        font-size: 16px;
+-      }
+-
+-
+-      #about h3 {
+-        margin: 0;
+-        margin-bottom: 10px;
+-        font-size: 14px;
+-      }
+-
+-      #about-content {
+-        background-color: #ffd;
+-        border: 1px solid #fc0;
+-        margin-left: -55px;
+-        margin-right: -10px;
+-      }
+-      #about-content table {
+-        margin-top: 10px;
+-        margin-bottom: 10px;
+-        font-size: 11px;
+-        border-collapse: collapse;
+-      }
+-      #about-content td {
+-        padding: 10px;
+-        padding-top: 3px;
+-        padding-bottom: 3px;
+-      }
+-      #about-content td.name  {color: #555}
+-      #about-content td.value {color: #000}
+-
+-      #about-content ul {
+-        padding: 0;
+-        list-style-type: none;
+-      }
+-
+-      #about-content.failure {
+-        background-color: #fcc;
+-        border: 1px solid #f00;
+-      }
+-      #about-content.failure p {
+-        margin: 0;
+-        padding: 10px;
+-      }
+-
+-
+-      #getting-started {
+-        border-top: 1px solid #ccc;
+-        margin-top: 25px;
+-        padding-top: 15px;
+-      }
+-      #getting-started h1 {
+-        margin: 0;
+-        font-size: 20px;
+-      }
+-      #getting-started h2 {
+-        margin: 0;
+-        font-size: 14px;
+-        font-weight: normal;
+-        color: #333;
+-        margin-bottom: 25px;
+-      }
+-      #getting-started ol {
+-        margin-left: 0;
+-        padding-left: 0;
+-      }
+-      #getting-started li {
+-        font-size: 18px;
+-        color: #888;
+-        margin-bottom: 25px;
+-      }
+-      #getting-started li h2 {
+-        margin: 0;
+-        font-weight: normal;
+-        font-size: 18px;
+-        color: #333;
+-      }
+-      #getting-started li p {
+-        color: #555;
+-        font-size: 13px;
+-      }
+-
+-
+-      #sidebar ul {
+-        margin-left: 0;
+-        padding-left: 0;
+-      }
+-      #sidebar ul h3 {
+-        margin-top: 25px;
+-        font-size: 16px;
+-        padding-bottom: 10px;
+-        border-bottom: 1px solid #ccc;
+-      }
+-      #sidebar li {
+-        list-style-type: none;
+-      }
+-      #sidebar ul.links li {
+-        margin-bottom: 5px;
+-      }
+-
+-    </style>
+-    <script type="text/javascript">
+-      function about() {
+-        info = document.getElementById('about-content');
+-        if (window.XMLHttpRequest)
+-          { xhr = new XMLHttpRequest(); }
+-        else
+-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+-        xhr.open("GET","rails/info/properties",false);
+-        xhr.send("");
+-        info.innerHTML = xhr.responseText;
+-        info.style.display = 'block'
+-      }
+-    </script>
+-  </head>
+-  <body>
+-    <div id="page">
+-      <div id="sidebar">
+-        <ul id="sidebar-items">
+-          <li>
+-            <h3>Browse the documentation</h3>
+-            <ul class="links">
+-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
+-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
+-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+-            </ul>
+-          </li>
+-        </ul>
+-      </div>
+-
+-      <div id="content">
+-        <div id="header">
+-          <h1>Welcome aboard</h1>
+-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+-        </div>
+-
+-        <div id="about">
+-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
+-          <div id="about-content" style="display: none"></div>
+-        </div>
+-
+-        <div id="getting-started">
+-          <h1>Getting started</h1>
+-          <h2>Here&rsquo;s how to get rolling:</h2>
+-
+-          <ol>
+-            <li>
+-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
+-              <p>To see all available options, run it without parameters.</p>
+-            </li>
+-
+-            <li>
+-              <h2>Set up a default route and remove or rename this file</h2>
+-              <p>Routes are set up in config/routes.rb.</p>
+-            </li>
+-
+-            <li>
+-              <h2>Create your database</h2>
+-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
+-            </li>
+-          </ol>
+-        </div>
+-      </div>
+-
+-      <div id="footer">&nbsp;</div>
+-    </div>
+-  </body>
+-</html>
