@@ -10,6 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110519192519) do
+
+  create_table "links", :force => true do |t|
+    t.string   "original"
+    t.string   "title"
+    t.string   "short"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "links", ["original"], :name => "index_links_on_original"
+  add_index "links", ["short"], :name => "index_links_on_short"
 
 end

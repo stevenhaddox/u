@@ -1,0 +1,18 @@
+<%= form_for(@link) do |f| %>
+  <% if @link.errors.any? %>
+  <div id="object_errors">
+    <h2>The following errors prevented us from shortening your link:</h2>
+    <ul id="errors">
+    <% @link.errors.full_messages.each do |msg| %>
+      <li class="error"><%= msg.gsub('Original','Link') %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+  <fieldset>
+    <%= f.label :original, 'Link to shorten:' %>
+    <%= f.text_field :original, :value => @link.original %>
+    <%= f.submit 'Shorten' %>
+  </fieldset>
+<% end %>

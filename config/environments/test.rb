@@ -32,4 +32,7 @@ U::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # APP Constants
+  configatron.domain = "http://u.dev"
 end

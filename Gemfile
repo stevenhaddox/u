@@ -2,8 +2,11 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'mysql2', "< 0.3"
 gem 'high_voltage'
+gem 'configatron'
+gem 'flash-message-conductor'
 
 # Bundle gems for the local environment
 group :development, :test do

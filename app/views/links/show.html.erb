@@ -1,0 +1,10 @@
+<h2>uRL Info</h2>
+
+<dl class="info link">
+  <dt>Link Title:</dt>
+    <dd><%= @link.title %></dd>
+  <dt>Short uRL:</dt>
+    <dd><%= link_to(@link.short_url, @link.short_url) %></dd>
+  <dt>Original uRL:</dt>
+    <dd><%= link_to(@link.original, @link.original) %></dd>
+</dl>
