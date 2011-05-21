@@ -1,0 +1,10 @@
+<h2>Recently Shortened uRLs</h2>
+
+<% unless @links.empty? %>
+  <ul id="links">
+  <% @links.each do |link| %>
+    <li><%= link_to(link.original, link.original) %> => <%= link_to(link.short, link.short_url) %></li>
+  <% end %>
+  </ul>
+<% end %>
+
