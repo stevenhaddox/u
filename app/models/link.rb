@@ -1,4 +1,3 @@
-require 'socket'
 class Link < ActiveRecord::Base
 
   before_save :shorten
@@ -6,7 +5,7 @@ class Link < ActiveRecord::Base
   validates :original, :presence => true, :uniqueness => true, :format => { :with => /^https?:\/\// }
 
   def shorten
-    uid = Link.last.nil? ? 'a' : Link.last.short.next
+    uid = Link.last.nil? ? 'a' : Link.last.short
     self.short = uid.next
   end
 
