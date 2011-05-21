@@ -5,6 +5,7 @@ Display all links with pagination / scoping
 Fix flash output
 General site styles
 Custom short links
+Create README
 Update slides for submitting & shortening URLs
 
 ## Sometime ##
