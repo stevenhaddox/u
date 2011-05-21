@@ -5,11 +5,9 @@ class LinksController < ApplicationController
   end
   
   def create
-    @link = Link.find_by_original(params[:link][:original])
-    @link ||= Link.new(params[:link])
+    @link = Link.find_by_original(params[:link][:original]) || Link.new(params[:link])
     respond_to do |format|
-      if @link.valid? && @link.new_record?
-        @link.save
+      if @link.new_record? && @link.save
         add_message( "Your shortened uRL is: #{@link.short_url}".html_safe )
         format.html { redirect_to @link }
         format.xml  { render :xml => @link,

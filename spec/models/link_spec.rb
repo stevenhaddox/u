@@ -5,6 +5,7 @@ describe Link do
   describe 'Validations' do
     it "should be valid with valid attributes" do
       link = Factory.build(:link)
+      link.valid? # invoke before_validation hook
       link.should be_valid
       link.save
       link.original.should_not be_nil
@@ -21,7 +22,7 @@ describe Link do
       link.should_not be_valid
       link.should have(1).error_on(:original)
     end
-    
+   
     it "should not allow duplicate long URLs" do
       link1 = Factory(:link, :original => 'http://google.com/?q=1')
       link2 = Factory.build(:link, :original => 'http://google.com/?q=1')
@@ -33,10 +34,10 @@ describe Link do
 
   describe ".shorten" do
     
-    it "should convert the original URL into a short URL before saving" do
+    it "should convert the original URL into a short URL before validating" do
       link = Factory.build(:link)
       link.short.should be_nil
-      link.save
+      link.valid?
       link.short.should_not be_nil
     end
     
