@@ -2,6 +2,7 @@
 
 <% unless @links.empty? %>
   <ul id="links">
+    <li>Original Link => Shortened Link</li>
   <% @links.each do |link| %>
     <li><%= link_to(link.original, link.original) %> => <%= link_to(link.short, link.short_url) %></li>
   <% end %>
