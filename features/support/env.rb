@@ -57,3 +57,7 @@ Before do
   DatabaseCleaner.clean
 end
 
+# Simplecov
+require 'simplecov'
+SimpleCov.start 'rails'
+
