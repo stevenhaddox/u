@@ -8,10 +8,6 @@ Spork.prefork do
 
   ENV["RAILS_ENV"] ||= 'test'
 
-  # Simplecov
-  require 'simplecov'
-  SimpleCov.start 'rails'
-
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
 
@@ -42,10 +38,15 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-  
-  # SimpleCov & Spork requires non-caching of classes, which requires us to load factory_girl_rails & models before each step
+
+  # Simplecov (only works when done *after* reloading of models)
+  require 'simplecov'
+  SimpleCov.start 'rails'
+
+  # Simplecov & Spork hack due to turning off caching of classes
   require "factory_girl_rails"
   Dir["#{Rails.root}/app/models/**/*.rb"].each { |model| load model }
+
 end
 
 # --- Instructions ---
