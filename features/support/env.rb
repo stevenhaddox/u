@@ -4,6 +4,10 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
+# Simplecov
+require 'simplecov'
+SimpleCov.start 'rails'
+
 require 'cucumber/rails'
 
 require 'capybara'
@@ -51,13 +55,12 @@ end
 #   end
 #
 
-require "factory_girl/step_definitions"
-
 Before do
   DatabaseCleaner.clean
+  
+  # SimpleCov requires non caching of classes, which requires us to load factory_girl_rails & models before each step
+  # As a benefit, this apparently makes us Spork compatible for parallel testing in the future...
+  require "factory_girl_rails"
+  require "factory_girl/step_definitions"
+  Dir["#{Rails.root}/app/models/**/*.rb"].each { |model| load model }
 end
-
-# Simplecov
-require 'simplecov'
-SimpleCov.start 'rails'
-

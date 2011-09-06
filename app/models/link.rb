@@ -6,7 +6,8 @@ class Link < ActiveRecord::Base
   validates :short, :presence => true
 
   def shorten
-    self.short = Link.last.nil? ? 'a' : Link.last.short.next
+    self.short = Link.last.nil? ? 'a' : Link.last.short.next if short.blank?
+    short
   end
 
   def short_url

@@ -25,9 +25,9 @@ Feature: User wants to shorten a URL
     And I should see "Link to shorten"
 
   Scenario: Submit an existing URL
-    And the following link exists:
-    | original          | Title  |
-    | http://google.com | Google |
+    And the following links exist:
+    | original          | short |
+    | http://google.com | a     |
     When I fill in "Link" with "http://google.com"
     And I press "Shorten"
     Then I should see "Link has already been created, here are it's details."

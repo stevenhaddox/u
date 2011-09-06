@@ -1,6 +1,22 @@
 --- 
 /Users/steven/.rvm/gems/ruby-1.9.2-p290@u/bin/rspec spec: 
   :original_result: 
+    /Users/steven/Sites/_projects/u/app/helpers/application_helper.rb: 
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
     /Users/steven/Sites/_projects/u/app/models/link.rb: 
     - 1
     - 
@@ -11,6 +27,7 @@
     - 
     - 1
     - 12
+    - 12
     - 
     - 
     - 1
@@ -18,13 +35,9 @@
     - 
     - 
     - 
-  :created_at: 2011-09-05 17:02:33.122089 -04:00
+  :created_at: 2011-09-05 21:53:20.337492 -04:00
 Cucumber Features: 
   :original_result: 
-    /Users/steven/Sites/_projects/u/app/controllers/application_controller.rb: 
-    - 1
-    - 1
-    - 
     /Users/steven/Sites/_projects/u/app/helpers/application_helper.rb: 
     - 1
     - 
@@ -40,6 +53,28 @@ Cucumber Features:
     - 
     - 
     - 
+    - 
+    /Users/steven/Sites/_projects/u/app/models/link.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 2
+    - 
+    - 
+    - 
+    /Users/steven/Sites/_projects/u/app/controllers/application_controller.rb: 
+    - 1
+    - 1
     - 
     /Users/steven/Sites/_projects/u/app/controllers/links_controller.rb: 
     - 1
@@ -77,21 +112,4 @@ Cucumber Features:
     - 
     - 
     - 
-    /Users/steven/Sites/_projects/u/app/models/link.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 2
-    - 
-    - 
-    - 
-  :created_at: 2011-09-05 17:32:19.003344 -04:00
+  :created_at: 2011-09-05 22:06:15.982093 -04:00

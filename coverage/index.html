@@ -21,21 +21,21 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-05T17:32:19-04:00">2011-09-05T17:32:19-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-05T22:06:16-04:00">2011-09-05T22:06:16-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">56.41%</span>)
+    (<span class="red">55.0%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>39</b> relevant lines. 
+    <b>40</b> relevant lines. 
     <span class="green"><b>22</b> lines covered</span> and
-    <span class="red"><b>17</b> lines missed </span>
+    <span class="red"><b>18</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -79,11 +79,11 @@
       
       <tr>
         <td><a href="#756cc187b5f03334c259c0a49c6dae4f7096a041" class="src_link" title="./app/models/link.rb">./app/models/link.rb</a></td>
-        <td class="yellow">87.5 %</td>
-        <td>16</td>
-        <td>8</td>
+        <td class="red">77.78 %</td>
+        <td>17</td>
+        <td>9</td>
         <td>7</td>
-        <td>1</td>
+        <td>2</td>
       </tr>
       
     </tbody>
@@ -141,14 +141,14 @@
           <div class="file_list_container" id="Models">
   <h2>
     Models
-    (<span class="yellow">87.5%</span>)
+    (<span class="red">77.78%</span>)
   </h2>
   <a name="Models"></a>
   <div>
     <b>1</b> files in total.
-    <b>8</b> relevant lines. 
+    <b>9</b> relevant lines. 
     <span class="green"><b>7</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -165,11 +165,11 @@
       
       <tr>
         <td><a href="#756cc187b5f03334c259c0a49c6dae4f7096a041" class="src_link" title="./app/models/link.rb">./app/models/link.rb</a></td>
-        <td class="yellow">87.5 %</td>
-        <td>16</td>
-        <td>8</td>
+        <td class="red">77.78 %</td>
+        <td>17</td>
+        <td>9</td>
         <td>7</td>
-        <td>1</td>
+        <td>2</td>
       </tr>
       
     </tbody>
@@ -1040,7 +1040,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/models/link.rb</h3>
-        <h4><span class="yellow">87.5 %</span> covered</h4>
+        <h4><span class="red">77.78 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -1161,7 +1161,20 @@
         <pre>9</pre>
       </td>
       <td>
-        <pre>    self.short = Link.last.nil? ? 'a' : Link.last.short.next</pre>
+        <pre>    self.short = Link.last.nil? ? 'a' : Link.last.short.next if short.blank?</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>10</pre>
+      </td>
+      <td>
+        <pre>    short</pre>
       </td>
       <td class="hits">
         0
@@ -1171,7 +1184,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>10</pre>
+        <pre>11</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -1184,7 +1197,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>11</pre>
+        <pre>12</pre>
       </td>
       <td>
         <pre></pre>
@@ -1197,7 +1210,7 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>12</pre>
+        <pre>13</pre>
       </td>
       <td>
         <pre>  def short_url</pre>
@@ -1210,7 +1223,7 @@
     
     <tr class="hit" data-hits="2">
       <td class="line_number">
-        <pre>13</pre>
+        <pre>14</pre>
       </td>
       <td>
         <pre>    &quot;#{configatron.domain.to_s}/#{short}&quot;</pre>
@@ -1223,7 +1236,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>14</pre>
+        <pre>15</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -1236,7 +1249,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>15</pre>
+        <pre>16</pre>
       </td>
       <td>
         <pre></pre>
@@ -1249,7 +1262,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>16</pre>
+        <pre>17</pre>
       </td>
       <td>
         <pre>end</pre>
