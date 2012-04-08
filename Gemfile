@@ -1,7 +1,7 @@
 # u/Gemfile
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.10'
 #gem 'sqlite3'
 gem 'mysql2', "< 0.3"
 gem 'high_voltage'
@@ -14,5 +14,6 @@ group :development, :test do
   gem 'cucumber-rails'        # Cucumber for BDD testing
   gem 'database_cleaner'      # Cleans your DB between tests
   gem 'factory_girl_rails'    # Factories > Fixtures (opinion)
+  gem 'irbtools', :require => 'irbtools/configure'
   gem 'rspec-rails', '~> 2.4' # RSpec for unit tests
 end
