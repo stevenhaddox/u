@@ -4,7 +4,7 @@ development:
   reconnect: false
   database: u_development
   pool: 5
-  username: root
+  username: ci
   password:
   socket: /tmp/mysql.sock
 
@@ -14,7 +14,7 @@ test:
   reconnect: false
   database: u_test
   pool: 5
-  username: root
+  username: ci
   password:
   socket: /tmp/mysql.sock
 
@@ -24,7 +24,7 @@ production:
   reconnect: false
   database: u_production
   pool: 5
-  username: root
+  username: ci
   password:
   socket: /tmp/mysql.sock
 
