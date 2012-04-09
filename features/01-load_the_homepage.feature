@@ -6,5 +6,5 @@ Feature: Visitor comes to the site
 
   Scenario: Load the homepage
     Given I am on the homepage
-    Then I should see "Welcome to 'usssss'"
+    Then I should see "Welcome to 'u'"
     And I should see "Short for uRL Shortener"
