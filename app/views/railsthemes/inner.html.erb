@@ -1,0 +1,49 @@
+<% content_for :page_title, "Inner Page" %>
+<% content_for :sidebar do %>
+  <h2 class="page-title">Page Name</h2>
+  <ul class="nav-inside">
+    <li>
+      <a class="active" href="#">Sub Page One</a>
+    </li>
+    <li>
+      <a href="#">Sub Page Two</a>
+    </li>
+    <li>
+      <a href="#">Sub Page Three</a>
+    </li>
+  </ul>
+<% end %>
+<h1>Heading 1 (Crete Round 46)</h1>
+<h2>Heading 2 (Crete Round 35)</h2>
+<h3>Heading 3 (Crete Round 26)</h3>
+<h4>Heading 4 (Crete Round 21)</h4>
+<h5>Heading 5 (Crete Round 17)</h5>
+<h6>Heading 6 (Crete Round 14)</h6>
+<p>
+  Paragraph text should be like this. The line spacing should be like this. The color should be like this. And all of the good stuff should be like this. This is just filler text. This sentence shows regular, <strong> bold</strong>, <strong><em>bold italics</em></strong> and <em>italics</em>.
+</p>
+<p>
+  Paragraph text should be like this. The line spacing should be like this. The color should be like this. And all of the good stuff should be like this. This is just filler text.
+</p>
+<h4>Numbered List.</h4>
+<ol>
+  <li>Number one</li>
+  <li>Number two</li>
+  <li>Number three</li>
+</ol>
+<h4>Bulleted List</h4>
+<ul>
+  <li>Bullet one</li>
+  <li>Bullet two</li>
+  <li>Bullet three</li>
+</ul>
+<a class="button">And a button!</a>
+<h2>Theme Specific Partials:</h2>
+<h3>Pricing Grid:</h3>
+<div class="row">
+  <%= render :partial => "shared/pricing_grid" %>
+</div>
+<h3>Testimonials:</h3>
+<div class="row">
+  <%= render :partial => 'shared/testimonial', :locals => { :name => "Eliza Brock", :link => "#", :image => "http://placehold.it/75x75", :text => "This is the best thing since sliced bread! In fact, I'm going to stop eating bread after this." } %>
+</div>

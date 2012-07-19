@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta</title>
+
+<link rel="stylesheet" type="text/css" href="http://documentup.com/stylesheets/screen.css">
+
+
+
+
+</head>
+<body><div id="container">
+<div id="nav">
+
+<div id="header">
+<a href="#" id="logo">Meta</a>
+</div>
+
+<ul id="sections">
+
+<li>
+<a href="#about-theme-meta">About Theme Meta</a>
+
+<ul>
+
+<li>
+<a href="#about-theme-meta/special-features">Special Features</a>
+</li>
+
+<li>
+<a href="#about-theme-meta/theme-layouts">Theme Layouts</a>
+</li>
+
+<li>
+<a href="#about-theme-meta/color-scheme">Color Scheme</a>
+</li>
+
+<li>
+<a href="#about-theme-meta/browser-support">Browser Support</a>
+</li>
+
+<li>
+<a href="#about-theme-meta/gem-support">Gem Support</a>
+</li>
+
+</ul>
+
+</li>
+
+<li>
+<a href="#about-railsthemes">About RailsThemes</a>
+
+<ul>
+
+<li>
+<a href="#about-railsthemes/directory-structure">Directory Structure</a>
+</li>
+
+<li>
+<a href="#about-railsthemes/naming-conventions">Naming Conventions</a>
+</li>
+
+<li>
+<a href="#about-railsthemes/jquery-ui">JQuery UI</a>
+</li>
+
+<li>
+<a href="#about-railsthemes/rails-version-support">Rails Version Support</a>
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+
+<div class="extra twitter">
+<iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=railsthemes&show_count=false"></iframe>
+</div>
+
+</div>
+<div id="content">
+
+<h1>Theme Usage &amp; Style Guide</h1>
+<h2 id='about-theme-meta'>About Theme Meta</h2 id='about-theme-meta'>
+<p>Could it get any more meta than this?  It&#39;s the RailsThemes.com design, for your duplicitous pleasure!
+
+</p>
+<p>When we decided to do a responsive redesign of RailsThemes.com, we thought: Hey, let&#39;s show &#39;em how it&#39;s done. Let&#39;s show &#39;em what a theme can do!
+
+</p>
+<p>So here it is, Theme Meta!
+
+</p>
+<p>The base theme is a delightful blue/green scheme with a responsive grid.
+
+
+</p>
+<h3 id='about-theme-meta/special-features'>Special Features</h3 id='about-theme-meta/special-features'>
+<ul>
+<li>Responsive design</li>
+<li>Color changing (via. sass)</li>
+<li>Matching jQuery UI theme (using the same color-changing ready sass)</li>
+</ul>
+<h3 id='about-theme-meta/theme-layouts'>Theme Layouts</h3 id='about-theme-meta/theme-layouts'>
+<p>This theme has the standard application and landing page styles. In addition, the standard application page accomodates pages with or without subnavigation.
+
+
+
+</p>
+<h3 id='about-theme-meta/color-scheme'>Color Scheme</h3 id='about-theme-meta/color-scheme'>
+<div>
+<style type="text/css">
+div.swatch {
+float: left;
+margin: 0 10px 10px 0;
+}
+div.outer {
+float: left;
+border: 1px solid #CCC;
+padding: 1px;
+}
+div.shadow {
+padding: 1px;
+}
+div.color {
+width: 40px;
+height: 40px;
+padding: 0;
+margin: 0;
+}
+div.caption {
+float: left;
+width: 160px;
+color: #555;
+font-size: 12px;
+line-height: 16px;
+margin: 0 0 0 10px;
+}
+.caption h3.caption {
+margin: 0 0 4px 0 !important;
+padding: 0 0 2px 0;
+width: 160px;
+border-bottom: 1px solid #E6E6E6;
+}
+
+div.swatch.tiny .color { width: 20px; height: 20px; }
+div.swatch.tiny div.caption { min-height: 60px; }
+div.swatch.tiny h3.caption { font-size: 66%; }
+</style>
+<div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#B61B2A;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$crimson</h3>HEX: #B61B2A</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#2A4380;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$midnightblue</h3>HEX: #2A4380</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#0B4A4C;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$teal1</h3>HEX: #0B4A4C</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#0C6B6D;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$teal2</h3>HEX: #0C6B6D</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#006060;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$teal3</h3>HEX: #006060</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#009898;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$darkcyan</h3>HEX: #009898</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#129A9A;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$lightseagreen</h3>HEX: #129A9A</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#FFC040;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$orange</h3>HEX: #FFC040</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#336699;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$steelblue</h3>HEX: #336699</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#404041;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$darkslateblue</h3>HEX: #404041</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#909091;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$lightslategray</h3>HEX: #909091</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#000000;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$black1</h3>HEX: #000000</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#181818;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$black2</h3>HEX: #181818</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#222222;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$black3</h3>HEX: #222222</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#252525;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$black4</h3>HEX: #252525</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#2C2C2C;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$black5</h3>HEX: #2C2C2C</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#333333;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$black6</h3>HEX: #333333</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#454545;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$dimgray1</h3>HEX: #454545</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#464646;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$dimgray2</h3>HEX: #464646</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#555555;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$dimgray3</h3>HEX: #555555</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#666666;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$dimgray4</h3>HEX: #666666</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#898989;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$gray</h3>HEX: #898989</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#ABABAB;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$darkgray</h3>HEX: #ABABAB</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#CDCDCD;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$lightgray1</h3>HEX: #CDCDCD</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#D7D7D7;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$lightgray2</h3>HEX: #D7D7D7</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#DEDEDE;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$gainsboro1</h3>HEX: #DEDEDE</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#E6E6E6;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$gainsboro2</h3>HEX: #E6E6E6</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#EDEDED;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$whitesmoke1</h3>HEX: #EDEDED</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#F5F5F5;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$whitesmoke2</h3>HEX: #F5F5F5</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#FAFAFA;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$white1</h3>HEX: #FAFAFA</div>
+</div><div class='swatch'>
+<div class='outer'>
+<div class='shadow' style='border:1px solid #000000;background-color:#111111;'>
+<div class='color' style='background-color:#FEFEFE;'></div>
+</div>
+</div>
+<div class='caption'><h3 class='caption'>$white2</h3>HEX: #FEFEFE</div>
+</div>
+<br style='clear: both;' />
+</div>
+
+
+<h3 id='about-theme-meta/browser-support'>Browser Support</h3 id='about-theme-meta/browser-support'>
+<p>A browser support report (and example screenshots) can be found at <a href="https://railsthemes.com/themes/meta"><a href="https://railsthemes.com/themes/meta">https://railsthemes.com/themes/meta</a></a>
+
+</p>
+<h3 id='about-theme-meta/gem-support'>Gem Support</h3 id='about-theme-meta/gem-support'>
+<p>In addition to all of the standard styling/markup support, this gem includes special stylesheets for:
+
+</p>
+<ul>
+<li>devise</li>
+<li>formtastic</li>
+<li>kaminari</li>
+<li>simple_form</li>
+<li>will_paginate</li>
+</ul>
+<p>Stylesheets are automatically included by the installer based on the contents of your Gemfile.
+
+</p>
+<h2 id='about-railsthemes'>About RailsThemes</h2 id='about-railsthemes'>
+<p>All of our themes take advantage of the Rails 3.1+ asset pipeline.  As such, you&#39;ll find our generated files in the following locations:
+
+</p>
+<h3 id='about-railsthemes/directory-structure'>Directory Structure</h3 id='about-railsthemes/directory-structure'>
+<ul>
+<li>app<ul>
+<li>assets<ul>
+<li>images<ul>
+<li><em>various</em></li>
+</ul>
+</li>
+<li>javascripts<ul>
+<li><em>various</em></li>
+</ul>
+</li>
+<li>stylesheets<ul>
+<li><em>various</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>controllers<ul>
+<li>railsthemes (example only)</li>
+</ul>
+</li>
+<li>views<ul>
+<li>layouts<ul>
+<li>application</li>
+<li>landing</li>
+<li>_flash</li>
+<li>_footer</li>
+<li>_header</li>
+</ul>
+</li>
+<li>railsthemes<ul>
+<li>inner (example of general layout)</li>
+<li>landing (example of landing layout)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>public<ul>
+<li>favicon.ico</li>
+</ul>
+</li>
+</ul>
+<h3 id='about-railsthemes/naming-conventions'>Naming Conventions</h3 id='about-railsthemes/naming-conventions'>
+<p>Most theme files are either namespaced (e.g. railsthemes_themename_filename.ext) or in a railsthemes specific folder (e.g. railsthemes_themename/)
+
+</p>
+<p>The exceptions to this are images and standard css/js assets from elsewhere (e.g. html5shiv).
+
+</p>
+<h3 id='about-railsthemes/jquery-ui'>JQuery UI</h3 id='about-railsthemes/jquery-ui'>
+<p>All themes include an appropriate jQuery UI theme.
+
+</p>
+<h3 id='about-railsthemes/rails-version-support'>Rails Version Support</h3 id='about-railsthemes/rails-version-support'>
+<p>Our themes are designed for Rails 3.1+
+</p>
+
+</div>
+</div></body>
+</html>

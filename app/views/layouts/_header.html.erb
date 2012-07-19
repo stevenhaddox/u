@@ -1,0 +1,33 @@
+<div id="header">
+  <div class="container">
+    <div id="logo" class="one-third column">
+      <h1 class="logo">
+        <a href="/">Your Logo</a>
+      </h1>
+    </div>
+    <div class="two-thirds column">
+      <ul class="navigation">
+        <li>
+          <a href="/railsthemes/landing">Sample Landing</a>
+        </li>
+        <li>
+          <a href="/railsthemes/inner">Sample Interior</a>
+        </li>
+        <li>
+          <a href="/railsthemes/jquery_ui">jQuery UI</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="titlebar">
+  <div class="container">
+    <div class="row">
+      <% if content_for? :page_title %>
+        <h1 class="title"><%= yield :page_title %>
+      </h1>
+      <% end %>
+      <%= yield :titlebar %>
+    </div>
+  </div>
+</div>

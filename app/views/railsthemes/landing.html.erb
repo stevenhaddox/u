@@ -1,0 +1,124 @@
+<% # - content_for :page_title, "Landing Page" %>
+<% content_for :titlebar do %>
+  <div class="seven columns">
+    <h1>This is your biggest talking point.</h1>
+    <p><strong>Meta</strong> is a <strong>prefix</strong> used in English (and other Greek-owing languages) to indicate a concept which is an abstraction from another concept, used to complete or add to the latter.</p>
+    <div>
+      <%= link_to "Learn More", "#", :class => "button call_to_action demi-full-width" %>
+    </div>
+  </div>
+  <div class="nine columns">
+    <div class="featured_content">
+      <h3>New Feature: Purple Dinosaurs!</h3>
+      <%= image_tag "http://placehold.it/496x230" %>
+    </div>
+  </div>
+<% end %>
+<div class="row">
+  <div class="four columns">
+    <h2>So, what is Meta?</h2>
+    <ul>
+      <li>Overused</li>
+      <li>Pretty Epic</li>
+      <li>Popular with the uber-nerds</li>
+      <li>Eliza's third-favorite word</li>
+    </ul>
+  </div>
+  <div>
+    <div>
+      <div class="feature six columns">
+        <h3>Vulputate Ullamcorper</h3>
+        <%= image_tag "http://placehold.it/75x75" %>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis.      .feature.six.columns</p>
+        <h3>Fermentum Mollis &amp; Risus</h3>
+        <%= image_tag "http://placehold.it/75x75" %>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+      </div>
+    </div>
+    <div>
+      <div class="feature six columns">
+        <h3>Inceptos sit Ultric</h3>
+        <%= image_tag "http://placehold.it/75x75" %>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="feature six columns">
+        <h3>Commodo-Ultricies Magna</h3>
+        <%= image_tag "http://placehold.it/75x75" %>
+        <p>Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <hr>
+  </hr>
+  <h2 class="eye-catcher">Punchy, quick text to draw the audience in immediately.</h2>
+  <p>
+    Because, really, what is more meta than describing what you're doing instead of actually doing it.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan tincidunt eleifend.
+    Nulla accumsan tincidunt eleifend.
+  </p>
+  <hr>
+  </hr>
+</div>
+<div class="row">
+  <div class="one-third column">
+    <h2>
+      <span class="tweets">Recent Tweets</span>
+    </h2>
+    <div class="tweets">
+      <blockquote>
+        <p>Happy Holidays.</p>
+        <span class="date">Dec. 22 at 10:15am</span>
+      </blockquote>
+      <blockquote>
+        <p>Ima Tweet (and a Pirate!)</p>
+        <span class="date">Dec. 22 at 10:15am</span>
+      </blockquote>
+      <blockquote>
+        <p>Members don’t miss lunch tomorrow. <a href="#">And a link!</a></p>
+        <span class="date">Dec. 22 at 10:15am</span>
+      </blockquote>
+      <blockquote>
+        <p>Mobile pros out there: How much are you working from your favorite 3rd places this week before the Xmas holiday?</p>
+        <span class="date">Dec. 22 at 10:15am</span>
+      </blockquote>
+      <blockquote>
+        <p>Members don’t miss lunch tomorrow. Coco’s Italian Market!</p>
+        <span class="date">Dec. 22 at 10:15am</span>
+      </blockquote>
+    </div>
+  </div>
+  <div class="two-thirds column">
+    <h2>Services</h2>
+    <p>
+      Among our more popular services is
+      <%= link_to "bitter copywriting.", "http://elizabrock.com" %>
+      We also offer some of the best synonym-googling available on the internet today.
+    </p>
+    <p>
+      <span class="meet-peep">Meet our people. They are so friendly.</span>
+      <a class="button-custom" href="#" title="<%=  "" %>">
+        Make an appointment
+      </a>
+    </p>
+    <h2 class="title-download">Downloads</h2>
+    <p>
+      <a class="button" href="#" title="<%=  "" %>">
+        Document One
+      </a>
+      <a class="button" href="#" title="<%=  "" %>">
+        Document Two
+      </a>
+    </p>
+    <h2>Our Happy Team</h2>
+    <ul class="grid">
+      <% 5.times do %>
+        <li><%= image_tag "http://placehold.it/100x100.png" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <%= render :partial => 'shared/testimonial', :locals => { :name => "Eliza Brock", :link => "#", :image => "http://placehold.it/75x75", :text => "This is the best thing since sliced bread! In fact, I'm going to stop eating bread after this." } %>
+</div>
