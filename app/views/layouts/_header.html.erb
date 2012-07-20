@@ -2,19 +2,16 @@
   <div class="container">
     <div id="logo" class="one-third column">
       <h1 class="logo">
-        <a href="/">Your Logo</a>
+        <a href="/">'u'RL Shortener</a>
       </h1>
     </div>
     <div class="two-thirds column">
       <ul class="navigation">
         <li>
-          <a href="/railsthemes/landing">Sample Landing</a>
+          <%= link_to('Shorten Your Link!', new_link_path) %>
         </li>
         <li>
-          <a href="/railsthemes/inner">Sample Interior</a>
-        </li>
-        <li>
-          <a href="/railsthemes/jquery_ui">jQuery UI</a>
+          <%= link_to('Recent Links', links_path) %>
         </li>
       </ul>
     </div>
