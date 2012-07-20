@@ -12,4 +12,9 @@ Feature: User wants to view a list of shortened URLs
     Then I should see "Recently Shortened uRLs"
     And I should see "http://google.com/?q=1 => a"
     And I follow "a"
-    Then I should see "Google"
+    Then I should see "Google Search"
+
+  Scenario: Follow the shortened uRL
+    Given I visit "/fail"
+    Then I should see "uRL Shortener"
+    And I should see "The short uRL 'fail' does not exist."

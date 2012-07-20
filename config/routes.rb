@@ -4,7 +4,6 @@ U::Application.routes.draw do
 
   root :to => 'high_voltage/pages#show', :id => 'home'
 
-  match 'railsthemes/landing' => 'railsthemes#landing'
-  match 'railsthemes/inner' => 'railsthemes#inner'
-  match 'railsthemes/jquery_ui' => 'railsthemes#jquery_ui'
+  # Follow shortened uRLs and redirect to original URL
+  match '/:short_url' => 'links#go'
 end

@@ -31,5 +31,15 @@ class LinksController < ApplicationController
       end
     end
   end
-  
+
+  def go
+    @link = Link.find_by_short(params[:short_url])
+    if @link
+      redirect_to @link.original
+    else
+      flash[:error] = "The short uRL '#{params[:short_url]}' does not exist."
+      redirect_to root_path
+    end
+  end
+
 end
