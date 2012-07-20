@@ -7,6 +7,7 @@ class Link < ActiveRecord::Base
 
   def shorten
     self.short = Link.last.nil? ? 'a' : Link.last.short.next if short.blank?
+    self.short = self.short.next if self.short == 'links'
     short
   end
 

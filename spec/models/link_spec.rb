@@ -48,6 +48,7 @@ describe Link do
       link.valid?
       link.short.should_not be_nil
       link.short.should_not == "links"
+      link.short.should == "linkt"
     end
 
   end
