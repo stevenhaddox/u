@@ -4,6 +4,8 @@ Feature: User wants to view a list of shortened URLs
   I want to be redirected to a longer URL by visiting the shortened uRL
   In order to more easily get to my original destination.
 
+  # Tag this as javascript to ensure Capybara follows the redirect
+  @javascript
   Scenario: Follow the shortened uRL
     Given the following links exist:
     | original          | title  | short |

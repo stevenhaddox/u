@@ -27,5 +27,6 @@ group :development, :test do
 end
 
 group :test do
+  gem "capybara-webkit"
   gem 'cucumber-rails'                                  # Cucumber for BDD testing
 end
