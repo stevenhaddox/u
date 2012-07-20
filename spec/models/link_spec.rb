@@ -41,6 +41,15 @@ describe Link do
       link.short.should_not be_nil
     end
     
+    it "should not shorten the url to 'links'" do
+      FactoryGirl.create(:link, :short => 'linkr')
+      link = FactoryGirl.build(:link)
+      link.short.should be_nil
+      link.valid?
+      link.short.should_not be_nil
+      link.short.should_not == "links"
+    end
+
   end
 
   describe ".short_url" do
