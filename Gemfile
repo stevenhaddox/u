@@ -5,7 +5,6 @@ gem 'rails', '~> 3.2.6'
 gem 'mysql2'
 gem 'high_voltage'
 gem 'configatron'
-gem 'flash-message-conductor'
 gem 'jquery-rails', '2.0.0'
 
 group :assets do

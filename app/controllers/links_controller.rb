@@ -16,12 +16,12 @@ class LinksController < ApplicationController
     @link = Link.find_by_original(params[:link][:original]) || Link.new(params[:link])
     respond_to do |format|
       if @link.new_record? && @link.save
-        add_message( "Your shortened uRL is: #{@link.short_url}".html_safe )
+        flash[:notice] = "Your shortened uRL is: #{@link.short_url}"
         format.html { redirect_to @link }
         format.xml  { render :xml => @link,
                       :status => :created, :location => @link }
       elsif @link.valid?
-        add_error ( "Link has already been created, here are it's details." )
+        flash[:error] = "Link has already been created, here are it's details."
         format.html { redirect_to @link }
       else
         format.html { render :action => "new",

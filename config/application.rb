@@ -49,10 +49,3 @@ module U
     config.assets.version = '1.0'
   end
 end
-
-require 'flash_message_conductor'
-
-Rails.configuration.after_initialize do
-  ActionController::Base.send( :include, PlanetArgon::FlashMessageConductor::ControllerHelpers )
-  ActionView::Base.send( :include, PlanetArgon::FlashMessageConductor::ViewHelpers )  
-end
