@@ -1,16 +1,17 @@
 # u/Gemfile
 source 'http://rubygems.org'
 
-gem 'rails', '< 4.0'
+gem 'rails', '~> 3.2.6'
 gem 'mysql2'
 gem 'high_voltage'
 gem 'configatron'
 gem 'flash-message-conductor'
+gem 'jquery-rails', '2.0.0'
 
 group :assets do
-  gem 'sass-rails', '>= 3.2.3'
-  gem 'coffee-rails', '>= 3.2.1'
-  gem 'uglifier', '>= 1.0.3', :require => 'uglifier'
+  gem 'sass-rails', '~> 3.2.4'
+  gem 'coffee-rails', '~> 3.2.2'
+  gem 'uglifier', '>= 1.2.3', :require => 'uglifier'
 end
 
 # Bundle gems for the local environment
