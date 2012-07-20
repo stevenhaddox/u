@@ -23,6 +23,6 @@ U::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   # APP Constants
-  configatron.domain = "http://u.dev"
+  configatron.domain = "http://u.pow"
 end
 
