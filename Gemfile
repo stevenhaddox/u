@@ -1,8 +1,10 @@
 # u/Gemfile
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.17'
 gem 'sqlite3'
+gem 'mysql2', '~>0.2'
+gem 'activerecord-mysql2-adapter'
 
 # Bundle gems for the local environment
 group :development, :test do
