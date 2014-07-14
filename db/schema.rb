@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20110519192519) do
     t.string   "original"
     t.string   "title"
     t.string   "short"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "links", ["original"], :name => "index_links_on_original"

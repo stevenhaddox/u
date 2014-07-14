@@ -14,7 +14,7 @@ Feature: User wants to view a list of shortened URLs
     Then I should see "Recently Shortened uRLs"
     And I should see "http://google.com => a"
     And I follow "a"
-    Then I should see "Google Search"
+    Then I should see "+Google"
 
   Scenario: Follow the shortened uRL
     Given I visit "/fail"
