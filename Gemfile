@@ -3,9 +3,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.2.6'
 gem 'mysql2'
-gem 'high_voltage'
+gem 'high_voltage', '< 2.0'
 gem 'configatron'
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.4'
@@ -15,17 +15,18 @@ end
 
 # Bundle gems for the local environment
 group :development, :test do
-  gem 'capybara'                                        # Ruby web browser / parser
-  gem 'database_cleaner'                                # Cleans your DB between tests
+  gem 'awesome_print'
   gem 'factory_girl_rails', '3.1.0', :require => false # Factories > Fixtures (opinion)
   gem 'foreman'
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 2.4'                           # RSpec for unit tests
   gem 'simplecov', '>= 0.4.0', :require => false        # Quick & dirty coverage output
   gem 'spork', '>=0.9.0.rc9'
 end
 
 group :test do
+  gem "capybara", '< 2.4.0'
   gem "capybara-webkit"
-  gem 'cucumber-rails'                                  # Cucumber for BDD testing
+  gem 'database_cleaner'                                # Cleans your DB between tests
+  gem 'cucumber-rails', :require => false               # Cucumber for BDD testing
+  gem 'rspec-rails', '~> 2.14.2'                           # RSpec for unit tests
 end
